@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS GRID</title>
+    <!-- <link rel="stylesheet" href="./css/css-grid-1.css">
+     -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        html {
+            /* !! This is so important for grid to expand to whole screen!! in html and body tag */
+            height: 100%;
+
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            border: 2px dashed green;
+            height: 100%;
+
+        }
+
+        .container {
+            margin-bottom: 20px;
+            display: grid;
+            /* grid-template-columns: 100px auto 100px;
+    grid-template-rows: 50px 50px;
+    grid-gap: 3px; */
+
+            /*  Fraction units: fr */
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 50px 50px;
+
+            /* using function: repeat(number of col or rows, unit) */
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 50px);
+
+            /* Shorthand of grid-template: row col in order*/
+            /* !! not the shorthand is not working!! */
+            grid-template: repeat(2, 50px) repeat(3, 1fr);
+        }
+
+        .items {
+            color: green;
+            font-size: 1.3rem;
+        }
+
+        .items.sub1 {
+            background: #000;
+            /* position: relative;
+    
+    height: 8rem; */
+        }
+
+        .items.sub1 p {
+            position: absolute;
+            display: inline-block;
+
+            top: 50%;
+            transform: translateY(-50%);
+            margin: 0;
+
+            border: 1px dashed pink;
+        }
+
+        .items.sub2 {
+            background: #333;
+        }
+
+        .items.sub3 {
+            background: #666;
+        }
+
+        .items.sub4 {
+            background: #999;
+        }
+
+        .items.sub5 {
+            background: #bbb;
+        }
+
+        .items.sub6 {
+            background: #ddd;
+        }
+
+        /* ---------------- container 2 ---------------- */
+        /* items position */
+        .container2 {
+
+            margin-bottom: 10px;
+            border: 1px dashed pink;
+            text-transform: uppercase;
+            height: 80%;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 40px auto 40px;
+            grid-template-areas:
+                /* . is blank */
+                /* "h h h h h h h h h h h ." 
+        "m c c c c c c c c c c c"
+        "f f f f f f f f f f f f"; */
+                "m h h h h h h h h h h h"
+                "m c c c c c c c c c c c"
+                "m f f f f f f f f f f f";
+
+            grid-gap: 2px;
+
+
+            /* align-items: center; */
+            font-size: 1.6rem;
+
+        }
+
+        .container2 div {
+            background: #ccc;
+            text-align: center;
+            color: greenyellow;
+
+            /* To center the text in div, row height and line-height are same */
+            /* line-height: 40px; */
+
+
+        }
+
+        /* The header space occupies from the first column gap and ends 3th column gap which is the last 
+    so that it takes the whole row*/
+        /* grid-column-start: 1;
+    grid-column-end: 3; */
+
+
+        /* --- Shorthand form --- 
+     grid-column-start: 1;
+     grid-column-end: 3; or -1
+*/
+        /*  grid-column: 1 / -1; */
+        .container2 .header {
+
+            grid-area: h;
+        }
+
+        /* grid-row: 1 / 3; */
+        .container2 .menu {
+            grid-area: m;
+        }
+
+        /*  grid-column: 2 / -1; */
+        .container2 .content {
+            grid-area: c;
+        }
+
+        /* The way to specify the last column cap by -1
+        grid-column: 1 / 3;
+        grid-column: 1 / -1;
+*/
+
+        .container2 .footer {
+            grid-area: f;
+        }
+
+        /* div.container3 {
+
+    background: pink;
+    height: 100%;
+} */
+    </style>
+</head>
+
+<body>
+    <h1>1. Grid-template-columns and rows</h1>
+    <div class="container">
+        <div class="items sub1">1
+            <!-- <p>1</p> -->
+        </div>
+        <div class="items sub2">2</div>
+        <div class="items sub3">3</div>
+        <div class="items sub4">4</div>
+        <div class="items sub5">5</div>
+        <div class="items sub6">6</div>
+    </div>
+    <h1>2. Position of items in Grid</h1>
+    <div class="container2">
+        <div class="header">header</div>
+        <div class="menu">Main menu
+            <ul>
+                <li>menu1</li>
+                <li>menu1</li>
+                <li>menu1</li>
+            </ul>
+        </div>
+        <div class="content">content</div>
+        <div class="footer">footer</div>
+    </div>
+
+</body>
+
+</html>

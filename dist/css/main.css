@@ -1,0 +1,214 @@
+body {
+  margin: 1.5em;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  min-height: 40rem;
+  background: url("../../images/shoes1.jpg") no-repeat;
+  background-size: cover;
+  background-position-x: 20%;
+  background-position-y: 20%;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  /* color: white; */
+}
+
+a {
+  color: white;
+  font-weight: bold;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav {
+  background: white;
+  opacity: 95%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 50%;
+  z-index: 2;
+  text-transform: uppercase;
+  transform: translateX(100%);
+  transition: transform 0;
+}
+header nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 8em;
+}
+header nav ul a {
+  color: black;
+  padding: 0.75em 2em;
+  display: block;
+}
+header nav ul a:hover {
+  background: #ddd;
+}
+header nav svg.close {
+  float: right;
+  margin-top: 1.3em;
+  margin-right: 2em;
+  width: 2em;
+}
+header nav svg.close:hover {
+  cursor: pointer;
+}
+header nav.open-nav {
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(0%);
+}
+header svg.menu {
+  width: 2.5em;
+  cursor: pointer;
+}
+header svg.menu path {
+  fill: white;
+}
+
+section.hero {
+  position: relative;
+  color: white;
+  height: 90vh;
+  min-height: 35rem;
+}
+section.hero h1 {
+  margin-top: 2rem;
+  font-size: 3rem;
+  line-height: 3.3rem;
+}
+section.hero p.subhead {
+  font-size: 1.4rem;
+}
+section.hero svg.down-arrow {
+  stroke: white;
+  fill: white;
+  position: absolute;
+  bottom: 2em;
+  width: 3em;
+}
+
+section.more-info {
+  position: unset;
+}
+section.more-info img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 12rem;
+}
+section.more-info .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+section.more-info .desc {
+  line-height: 1.5rem;
+}
+
+@media only screen and (min-width: 680px) {
+  body {
+    margin: 1.5em 5em;
+    font-family: "Poppins", sans-serif;
+  }
+  section.more-info img {
+    height: 14em;
+  }
+}
+@media only screen and (min-width: 920px) {
+  .wrapper {
+    margin: 0 auto;
+  }
+  svg.menu {
+    display: none;
+  }
+  header a {
+    color: black;
+  }
+  header a span {
+    color: red;
+  }
+  header nav {
+    transform: translateX(0%);
+    position: unset;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+  header nav svg.close {
+    display: none;
+  }
+  header nav ul {
+    display: flex;
+    margin: 0;
+  }
+  header nav ul a {
+    color: white;
+    padding: 0.3em 1.5em;
+    font-size: 0.9rem;
+  }
+  header nav ul a:hover {
+    background: none;
+    text-decoration: underline;
+  }
+  .hero-img {
+    left: unset;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+  }
+  section.hero {
+    position: relative;
+    color: black;
+    height: 90vh;
+    width: 40%;
+  }
+  section.hero svg.down-arrow {
+    stroke: black;
+    fill: black;
+    position: absolute;
+    bottom: 5em;
+    width: 3em;
+  }
+  section.more-info .feature {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    margin-bottom: 4em;
+  }
+  section.more-info .feature img {
+    height: 17em;
+  }
+  section.more-info .feature .col-content {
+    text-align: right;
+    padding: 0 10%;
+  }
+  section.more-info .feature.left {
+    grid-template-areas: "left right";
+  }
+  section.more-info .feature.left .col-image {
+    grid-area: left;
+  }
+  section.more-info .feature.left .col-content {
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .wrapper {
+    margin: 0 2%;
+    padding: 0;
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        /* -- This default CSS will be applied in the screen size from 1 to 600px --- 
+            => Each column stacks top of previouse one.
+        */
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        .row {
+            float: inline-start;
+            overflow: hidden;
+            margin: 20px 10px 0px 10px;
+            background: pink;
+        }
+
+        .col-3 {
+            padding: 10px;
+            /* display: block; */
+            width: 100%;
+        }
+
+        @media screen and (min-width:600px) {
+
+            /* When the screen size is over 600px then, .col-3 will be applied.
+
+            */
+
+            .col-3 {
+
+                width: 33.33%;
+                float: left;
+                margin-top: 10px;
+                padding: 15px;
+
+            }
+
+
+        }
+    </style>
+    <div class="row">
+        <div class="col-3">
+            <h1>Column 1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, aut? Harum asperiores blanditiis fugit,
+                minima id impedit neque, aut sed beatae, dolore repudiandae saepe quae illo accusantium exercitationem
+                aliquid enim!
+                Qui porro reprehenderit officiis perferendis nesciunt eius pariatur numquam, ipsa laborum ab ratione,
+                nihil
+                tempora explicabo? Provident exercitationem animi dolores, nihil in similique facilis repellat
+                recusandae
+                quas fugiat quod repellendus.</p>
+        </div>
+        <div class="col-3">
+            <h1>Column 2</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, aut? Harum asperiores blanditiis fugit,
+                minima id impedit neque, aut sed beatae, dolore repudiandae saepe quae illo accusantium exercitationem
+                aliquid enim!
+                Qui porro reprehenderit officiis perferendis nesciunt eius pariatur numquam, ipsa laborum ab ratione,
+                nihil
+                tempora explicabo? Provident exercitationem animi dolores, nihil in similique facilis repellat
+                recusandae
+                quas fugiat quod repellendus.</p>
+        </div>
+        <div class="col-3">
+            <h1>Column 3</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, aut? Harum asperiores blanditiis fugit,
+                minima id impedit neque, aut sed beatae, dolore repudiandae saepe quae illo accusantium exercitationem
+                aliquid enim!
+                Qui porro reprehenderit officiis perferendis nesciunt eius pariatur numquam, ipsa laborum ab ratione,
+                nihil
+                tempora explicabo? Provident exercitationem animi dolores, nihil in similique facilis repellat
+                recusandae
+                quas fugiat quod repellendus.</p>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <h1>New Row</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, aut? Harum asperiores blanditiis fugit,
+            minima id impedit neque, aut sed beatae, dolore repudiandae saepe quae illo accusantium exercitationem
+            aliquid enim!
+            Qui porro reprehenderit officiis perferendis nesciunt eius pariatur numquam, ipsa laborum ab ratione,
+            nihil
+            tempora explicabo? Provident exercitationem animi dolores, nihil in similique facilis repellat
+            recusandae
+            quas fugiat quod repellendus.</p>
+    </div>
+
+</body>
+
+</html>

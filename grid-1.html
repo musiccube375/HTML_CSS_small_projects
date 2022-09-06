@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Grid Layout</title>
+    <style>
+        .grid-container {
+            display: grid;
+            /* grid-template-columns: auto auto auto; */
+            gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .grid.header {
+            grid-column: 1 / span 3;
+
+        }
+
+        .grid.menu {
+            min-width: 150px;
+            grid-row: 2 / span 2;
+            height: auto;
+            font-size: 1.2rem;
+
+        }
+
+        .grid.main {
+            height: auto;
+            font-size: 1rem;
+        }
+
+        .grid.footer {
+            grid-column: 2 / span 2;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>The grid-column Property</h1>
+
+    <p>Use the <em>grid-column</em> property to specify where to place an item.</p>
+
+    <div class="grid-container">
+        <div class="grid header">Header</div>
+        <div class="grid menu">
+            <p>Menu</p>
+            <ul>
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+                <li>menu4</li>
+                <li>menu5</li>
+            </ul>
+        </div>
+        <div class="grid main">
+            <h2>Main</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae vero expedita, atque non voluptates dolor
+                ea, exercitationem magni beatae reprehenderit omnis obcaecati culpa animi corporis et dicta excepturi,
+                voluptatum nulla.
+                Corrupti distinctio corporis libero a blanditiis minima aspernatur optio autem dolores aperiam dicta
+                fugiat, dolore praesentium illum accusamus quasi hic quis repudiandae quod veniam eum voluptate!
+                Perspiciatis reprehenderit ea in?
+                Quasi aspernatur voluptatibus ipsam maxime tempora! Natus facere atque autem asperiores minima aliquam
+                error, nisi voluptatum explicabo labore obcaecati eveniet vitae provident fuga alias quisquam adipisci!
+                Officia nostrum similique vel!
+                Quam nam error optio a minus quibusdam at, exercitationem provident corporis esse, tenetur unde est
+                consequuntur minima saepe voluptatibus harum laborum! Maiores, ducimus minima id ullam dolore totam
+                dicta qui!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus magnam explicabo rerum, corrupti
+                facere veniam?</p>
+        </div>
+        <div class="grid rigt">Right</div>
+        <div class="grid footer">Footer</div>
+
+    </div>
+
+</body>
+
+</html>

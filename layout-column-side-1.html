@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* Border, margin and padding is in border-box with width and height not growing */
+            box-sizing: border-box;
+
+        }
+
+        .contain {
+            position: relative;
+        }
+
+        /* ------ Navbar CSS ------ */
+        /* Below CSS are applied under 600px width size */
+        .navbar ul {
+            list-style-type: none;
+            font-family: arial, helvetica, sans-serif;
+            font-size: 1.2em;
+            font-weight: 100;
+            /* overflow:hidden => clipping all content out of element size no scroll*/
+            overflow: hidden;
+        }
+
+        .navbar li {
+            /* diplay:block => li element stacks horizontally */
+            display: block;
+            background: #333;
+            padding: 12px 14px;
+        }
+
+        /* li:first-child = > first li element */
+        .navbar li:first-child {
+            background: rgb(29, 106, 106);
+        }
+
+        .navbar li:hover {
+            background: #111;
+        }
+
+        .navbar ul a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* ------ content row CSS ----- */
+        .row {
+            margin: 20px 30px;
+        }
+
+        .column {
+            padding: 20px;
+        }
+
+        .column .middle {
+            padding: 20px;
+            /* background: rgb(214, 213, 213); */
+        }
+
+        .column.middle .col-3 {
+            padding-top: 10px;
+            /* background: pink; */
+        }
+
+        .column.middle .col-3 h2 {
+            padding-bottom: 10px;
+        }
+
+        /* This is very important to finishing float action!! */
+        .column-end {
+            float: none;
+            clear: both;
+        }
+
+        /* ------ Footer CSS ----- */
+        .footer {
+            display: block;
+            text-align: center;
+            background: pink;
+            box-sizing: border-box;
+            margin-top: 20px;
+            padding-top: 20px;
+            height: 200px;
+        }
+
+        @media screen and (min-width:480px) {
+            .navbar {
+                background: #333;
+            }
+
+            .navbar ul li {
+                float: left;
+            }
+
+            .navbar ul li:last-child {
+                float: right;
+                margin-right: 20px;
+            }
+        }
+
+        @media screen and (min-width:640px) {
+            .column {
+                float: inline-start;
+            }
+
+            .column.middle .col-3 {
+                float: left;
+                width: 33.33%;
+                padding: 20px;
+                /* background: gray; */
+            }
+
+            .column.middle {
+                max-height: 550px;
+            }
+        }
+
+        @media screen and (min-width:1000px) {
+            .column {
+                float: inline-start;
+            }
+
+            .column.side {
+                width: 15%;
+                background: gray;
+            }
+
+            .column.middle {
+                width: 70%;
+            }
+        }
+    </style>
+    <div class="contain">
+        <div class="header">
+            <div class="navbar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="column side">
+                <h1>Left Side</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid maiores commodi nesciunt dolore,
+                    debitis possimus minima sapiente delectus culpa autem magni deserunt tempore officiis doloremque
+                    velit iure quas, odit voluptate?</p>
+            </div>
+            <div class="column middle">
+                <h1>Middle</h1>
+                <div class="col-3">
+                    <div>
+                        <h2>Column 1</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum perferendis, nulla
+                            incidunt tempore ut animi est alias, voluptatum maiores velit ab quae dolorem molestias,
+                            natus id suscipit assumenda nihil deleniti.
+                            Sit fugit beatae fuga ea quidem excepturi. Similique reiciendis beatae porro molestias
+                            error eaque recusandae quisquam illo numquam fugit aliquid natus optio laboriosam nulla
+                            voluptatem omnis dolor iusto, vel sapiente.</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h2>Column 2</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum perferendis, nulla
+                        incidunt tempore ut animi est alias, voluptatum maiores velit ab quae dolorem molestias,
+                        natus id suscipit assumenda nihil deleniti.
+                        Sit fugit beatae fuga ea quidem excepturi. Similique reiciendis beatae porro molestias
+                        error eaque recusandae quisquam illo numquam fugit aliquid natus optio laboriosam nulla
+                        voluptatem omnis dolor iusto, vel sapiente.</p>
+                </div>
+                <div class="col-3">
+                    <h2>Column 3</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum perferendis, nulla
+                        incidunt tempore ut animi est alias, voluptatum maiores velit ab quae dolorem molestias,
+                        natus id suscipit assumenda nihil deleniti.
+                        Sit fugit beatae fuga ea quidem excepturi. Similique reiciendis beatae porro molestias
+                        error eaque recusandae quisquam illo numquam fugit aliquid natus optio laboriosam nulla
+                        voluptatem omnis dolor iusto, vel sapiente.</p>
+                </div>
+
+            </div>
+
+            <div class="column side">
+                <h1>Right Side</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid maiores commodi nesciunt dolore,
+                    debitis possimus minima sapiente delectus culpa autem magni deserunt tempore officiis doloremque
+                    velit iure quas, odit voluptate?</p>
+            </div>
+            <div class="column-end"></div>
+        </div>
+
+        <div style="margin: 0px 10px; padding: 5px">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum distinctio fugit odit accusamus nihil!
+                Quam sequi totam nesciunt, aperiam nam possimus ipsum quasi laudantium consectetur odio, voluptas culpa
+                fugit repellendus?</p>
+        </div>
+        <div class="footer">
+            <h1>Footer</h1>
+            <div style="position:absolute; bottom:20px;margin:0;  text-align:center; width:100%;">
+                <p>&copy; Copyright 1999-2022 by LaLaSol. All Rights Reserved.</p>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

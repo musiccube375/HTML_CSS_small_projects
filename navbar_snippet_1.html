@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Navbar</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+            list-style-type: none;
+            margin: 0 0 10px 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        /* --- Horizontal Navbar --- */
+        .horizontal_navbar li {
+
+            float: left;
+            /* float: left; there is no gap between li elements */
+            /* display: inline-block; there is gaps between li elements */
+
+            padding: 14px 16px;
+        }
+
+        .horizontal_navbar .about {
+            float: right;
+        }
+
+        .horizontal_navbar li a {
+            text-decoration: none;
+            color: white;
+        }
+
+
+        .horizontal_navbar li:first-child {
+            background: green;
+        }
+
+        .horizontal_navbar li:hover {
+            background-color: #111;
+        }
+
+        /* --- Vertical Navbar --- */
+        .vertical_navbar li {
+            display: block;
+            margin: 0;
+            padding: 12px 16px;
+        }
+
+        .vertical_navbar li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .vertical_navbar li:first-child {
+            background: green;
+        }
+
+        .vertical_navbar li:hover {
+            background: #111;
+        }
+    </style>
+
+    <ul class="horizontal_navbar">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+        <li class="about"><a href="#">About</a></li>
+    </ul>
+    <p>Horizontal Navbar</p>
+
+    <ul class="vertical_navbar">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+        <li class="about"><a href="#">About</a></li>
+    </ul>
+    <p>Vertical Navbar</p>
+</body>
+
+</html>

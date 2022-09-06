@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+</head>
+
+<body>
+    <style>
+        .dropdown-content {
+            display: none;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown .dropdown-content {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.em;
+
+            background: #eee;
+            overflow: hidden;
+            width: 200px;
+
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown .dropdown-content a {
+            color: #555;
+            text-decoration: none;
+        }
+
+        .dropdown .dropdown-content div {
+            padding: 10px;
+            border-bottom: 0.1px solid #aaa;
+        }
+
+        .dropdown .dropdown-content .content-last {
+            border: none;
+        }
+
+        .dropdown .dropdown-content div:hover {
+            background-color: #111;
+        }
+
+        .dropdown .dropdown-content div:hover a {
+            color: white;
+        }
+    </style>
+
+    <h1>Hoverable Dropdown</h1>
+    <p>Move the mouse over the text below to open the dropdown content</p>
+    <div class="dropdown">
+        <span>mouse over me</span>
+        <div class="dropdown-content">
+            <div><a href="#" target="_self">Hello world!</a></div>
+            <div><a href="#">Mike</a></div>
+            <div class="content-last"><a href="#">John</a></div>
+        </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia error dignissimos, tenetur cupiditate minus
+        autem distinctio sed doloremque magnam illo obcaecati corrupti delectus nemo animi iure culpa rerum blanditiis
+        numquam?
+        Cupiditate explicabo dicta necessitatibus quos ipsa nesciunt quisquam vel dolorum, soluta quidem aspernatur
+        corporis numquam saepe dolores ea! Recusandae, perferendis enim. Itaque, culpa. Est, repellat. Commodi repellat
+        beatae tenetur doloremque.</p>
+
+</body>
+
+</html>
