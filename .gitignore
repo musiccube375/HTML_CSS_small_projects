@@ -1,1 +1,4 @@
 fontawesome-free-6.2.0-web/
+# to ignore the images folder
+# git rm -r --cached images 
+images/
